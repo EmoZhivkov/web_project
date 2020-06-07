@@ -1,0 +1,212 @@
+#menu {
+	text-align: center;
+}
+/* menu icon */
+#menu-icon {
+	display: none; /* hide menu icon initially */
+}
+#nav, #nav li {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	z-index:108;
+}
+#nav li {
+	list-style: none;
+	display:inline-block;
+}
+/* nav link */
+#nav a {
+	display: block;
+	line-height: 60px;
+	padding:0 18px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;   		
+	text-align:left;
+	color:black;
+	font-size:18px;		
+	font-weight:bold;	
+	text-transform:uppercase;
+}
+#nav a:hover {
+	display: block;
+	line-height: 60px;
+	padding:0 18px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;   		
+	text-align:left;
+	color:#f0f0f0;
+	font-size:18px;	
+	font-weight:bold;		
+	text-transform:uppercase;
+}
+/* nav dropdown */
+#nav ul {
+	top:60px;
+	left:0px;
+	padding: 0;
+	position: absolute;
+	display: none; /* hide dropdown */
+	width: 280px;
+	background: #e73c40;
+}
+#nav ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+#nav ul li a, #nav ul li a:link, #nav ul li a:visited  {
+	float: none;
+	display: block;
+	width:280px;
+	line-height: 30px;
+	text-align:left;
+	padding:0 18px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;   	
+	color:black;
+	font-size:16px;	
+	font-weight:bold;	
+	text-transform:uppercase;	
+}
+#nav ul li a:hover {
+	float: none;
+	display: block;
+	width: 280px;
+	line-height: 30px;
+	text-align:left;
+	padding:0 18px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;   	
+	background: #f0f0f0;
+	color:black;
+	font-size:16px;
+	font-weight:bold;	
+	text-transform:uppercase;
+}
+#nav li:hover > ul {
+	display: block; /* show dropdown on hover */
+}
+
+/************************************************************************************
+MOBILE
+*************************************************************************************/
+@media only screen and (max-width: 1000px) {
+
+	/* nav-wrap */
+	#menu {
+		position: relative;
+	}
+	/* menu icon */
+	#menu-icon {
+		font-size:18px;		
+		color: #ffffff;
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		background: url(images/menu-icon.png) no-repeat center right;
+		cursor: pointer;
+		text-align:left;
+		font-weight:bold;	
+		padding-left:0px;
+		display: block; /* show menu icon */
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;   
+	}
+	#menu-icon:hover {
+		color: #f0f0f0;
+	}
+	#menu-icon.active {
+		color: #f0f0f0;
+	}	
+	/* main nav */
+	#nav {
+		clear: both;
+		position: absolute;
+		top: 60px;
+		width: 100%;
+		z-index: 10000;
+		background: #052b62;
+		display: none; /* visibility will be toggled with jquery */
+	}
+	#nav li {
+		clear: both;
+		float: none;
+	}
+	#nav a, #nav ul a, #nav a.first, #nav ul a.first {		
+		padding-left:15px;
+		color:#f0f0f0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;    
+		font-size:16px;
+		width: 100%;
+		line-height: 24px;
+		font-weight:600;	
+	}
+	#nav a:hover, #nav ul a:hover, #nav a.first:hover, #nav ul a.first:hover {		
+		background: white;
+		color:#3465a8;
+		padding-left:15px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;    
+		font-size:16px;
+		width: 100%;
+		line-height: 24px;
+		font-weight:600;	
+	}	
+	#nav a.first, #nav a.first:hover {
+		padding-left:15px;
+	}
+
+	/* dropdown */
+	#nav ul {
+		width: auto;
+		position: static;
+		display: block;
+		border: none;
+		background: inherit;
+		margin-top:10px;
+	}
+	#nav ul li {
+		margin-left:0;
+	}
+	#nav ul li a, #nav ul li a:link, #nav ul li a:visited, #nav ul li ul li a, #nav ul li ul li a:link, #nav ul li ul li a:visited {		
+		padding-left:30px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;    
+		margin:0;
+		line-height:24px;
+		font-weight:normal;
+		width: 100%;
+		text-transform:uppercase;	
+	}
+	#nav ul li a:hover, #nav ul li ul li a:hover {		
+		padding-left:30px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;    
+		margin:0;
+		line-height:24px;
+		font-weight:normal;
+		width: 100%;
+		text-transform:uppercase;		
+	}
+
+}
+
+@media screen and (min-width: 1001px) {
+
+	/* ensure #nav is visible on desktop version */
+	#nav {
+		display: block !important;
+	}
+
+}
