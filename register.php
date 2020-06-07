@@ -13,16 +13,16 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
         $checkemail = CheckAvailability($db, $email, 0);
 		if ($checkemail > 0) {
 			die('Мейлът се ползва от друг потребител');
-        }	
+        }
         $pass = password_hash($pass, PASSWORD_DEFAULT);
 
         $stmt = $db->prepare("insert into clients (email, pass) values (:email, :pass)");
-        $stmt->execute(array(':email' => $email, ':pass' => $pass)); 
+        $stmt->execute(array(':email' => $email, ':pass' => $pass));
         $last_id = $db->lastInsertId();
 
         $_SESSION['clientid'] = $last_id;
-        $_SESSION['client'] = $email;  
-        setcookie("sitecl", $last_id, strtotime('+30 days'));         
+        $_SESSION['client'] = $email;
+        setcookie("sitecl", $last_id, strtotime('+30 days'));
 
         echo "<script> location.href='login.php';</script>";
 
@@ -42,9 +42,8 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 
 $tpl->get_tpl('up.htm');
-$tpl->set_value('title',$ime .' - ' .$t);          
-$tpl->set_value('description','Регистрация. ' .$d);     
-$tpl->set_value('meta',$meta);      
+$tpl->set_value('title',$ime .' - ' .$t);
+$tpl->set_value('description','Регистрация. ' .$d);
 
 $tpl->tpl_parse();
 echo $tpl->html;
@@ -56,8 +55,8 @@ require_once('menu.php');
 <div class="contoverall paddingupdown">
 	<div class="contall">
         <div class="call centered">
-            <h1 class="centered">РЕГИСТРАЦИЯ</h1>  
-        </div> 
+            <h1 class="centered">РЕГИСТРАЦИЯ</h1>
+        </div>
        <div class="call centered">
             <form method="post" name="contactForm" action="register.php">
                 <div class="mainscroll">
@@ -66,9 +65,9 @@ require_once('menu.php');
                 </div>
                 <div class="mainscroll">
                     <div class="inputleft">Парола</div>
-                    <div class="inputright"><input name="pass" type="password"></div>     
+                    <div class="inputright"><input name="pass" type="password"></div>
                 </div>
-                <div class="mainscroll">  
+                <div class="mainscroll">
                     <div class="inputleft">&nbsp;</div>
                     <div class="inputright"><a href="javascript:contactForm.submit();" class="buton">Регистрация</a></div>
                 </div>

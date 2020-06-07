@@ -2,11 +2,11 @@
 
 $self = $_SERVER['PHP_SELF'];
 
-$menu = '<div class="contoverallup">    
+$menu = '<div class="contoverallup">
 <div class="contall">
 	<div class="call centered">
 		<div class="clogo">
-			<a href="/"><img src="images/logo.png" alt="WebMusic" title="WebMusic"></a>
+			<a href="index.php"><img src="images/logo.png" alt="WebMusic" title="WebMusic"></a>
 		</div>
 	</div>
 </div>
@@ -17,7 +17,7 @@ $menu = '<div class="contoverallup">
 	<div class="callmenu">
 			<nav id="menu">
 				<ul id="nav">
-					<li><a href="/" class="first">СТАТИСТИКА</a></li>';
+					<li><a href="index.php" class="first">СТАТИСТИКА</a></li>';
 $query = "SELECT * FROM vidove ORDER by id";
 $stmt = $db->query($query);
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -32,7 +32,7 @@ if ($clientid > 0) {
 }
 $menu .= '</ul></li>
 			   </ul>
-			</nav>             
+			</nav>
 	</div>
 </div>
 </div>';

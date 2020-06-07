@@ -11,10 +11,9 @@ $stmt = $db->query($query);
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	$title = $row['t'];
 	$description = $row['d'];
-}	
-$tpl->set_value('title','Категории - ' .$title);          
+}
+$tpl->set_value('title','Категории - ' .$title);
 $tpl->set_value('description','Категории. ' .$description);  
-$tpl->set_value('meta','');            
 
 $tpl->tpl_parse();
 echo $tpl->html;
@@ -39,10 +38,10 @@ if (isset($_REQUEST['v']) && $_REQUEST['v'] > 0) {
 
 ?>
 <div class="contoverall">
-	<div class="contall">  
+	<div class="contall">
         <div class="call centered paddingupdown">
             <h1 class="centered"><?=GetVid($db, $_REQUEST['v'])?></h1>
-<?php 
+<?php
 $songs = '';
 $query = "SELECT * FROM products " .$strFilterExpr ." ORDER by id desc";
 $records_per_page = 6;
@@ -52,7 +51,7 @@ if(isset($_GET["page"])) {
 }
 $query2 = $query. " limit " .$records_per_page ." OFFSET " .$offset;
 $stmt = $db->query($query2);
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $videoId = $row['youtube'];
     $videoId = str_replace('https://www.youtube.com/watch?v=','',$videoId);
     $iframe = '<div class="contproduct"><iframe id="' .$row['id'] .'" src="//www.youtube.com/embed/' .$videoId .'" frameborder="0" allowfullscreen allow="autoplay"></iframe><a href="javascript:getPlayed(' .$row['id'] .');" id="link' .$row['id'] .'" class="play">&nbsp;</a></div>';
@@ -66,7 +65,7 @@ if (strpos($self, '?') > -1) {
     $sign = '&';
 }
 $row_count = $db->query($query)->rowCount();
-$pagination = '';			
+$pagination = '';
 if($row_count > 0) {
     $totalproducts = ceil($row_count/$records_per_page);
     $currentPage = 1;
@@ -107,7 +106,7 @@ if ($row_count > $records_per_page) {
 </script>
         </div>
 
-        
+
    </div>
 </div>
 

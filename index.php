@@ -11,10 +11,9 @@ $stmt = $db->query($query);
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	$title = $row['t'];
 	$description = $row['d'];
-}	
-$tpl->set_value('title',$title);          
-$tpl->set_value('description',$description);  
-$tpl->set_value('meta','');            
+}
+$tpl->set_value('title',$title);
+$tpl->set_value('description',$description);
 
 $tpl->tpl_parse();
 echo $tpl->html;
@@ -28,7 +27,7 @@ $vis2 = GetVis($db, 2);
 $vis3 = GetVis($db, 3);
 
 ?>
-<div class="contoverall">   
+<div class="contoverall">
      <div class="slide">
 		<img src="images/slider.jpg" class="objectfit" alt="WebMusic">
      </div>

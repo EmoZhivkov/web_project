@@ -11,10 +11,9 @@ $stmt = $db->query($query);
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	$title = $row['t'];
 	$description = $row['d'];
-}	
-$tpl->set_value('title','Търсене - ' .$title);          
-$tpl->set_value('description','Търсене. ' .$description);  
-$tpl->set_value('meta','');            
+}
+$tpl->set_value('title','Търсене - ' .$title);
+$tpl->set_value('description','Търсене. ' .$description);
 
 $tpl->tpl_parse();
 echo $tpl->html;
@@ -23,7 +22,7 @@ require_once('menu.php');
 
 ?>
 <div class="contoverall">
-	<div class="contall">  
+	<div class="contall">
         <div class="call centered paddingupdown">
             <h1 class="centered">Търсене</h1>
             <form method="get" name="contactForm" action="search.php">
@@ -38,7 +37,7 @@ require_once('menu.php');
   </div>
 </div>
 <div class="contoverall">
-	<div class="contall">  
+	<div class="contall">
           <div class="call centered paddingupdown">
 <?php
 $q = filter_input(INPUT_GET, 'q', FILTER_SANITIZE_MAGIC_QUOTES);
@@ -63,15 +62,15 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 echo $songs;
 ?>
-        </div>  
+        </div>
 <?php
-$self = $pagerLink;
+$self = 'search.php?q=' .$q;
 $sign = '?';
 if (strpos($self, '?') > -1) {
     $sign = '&';
 }
 $row_count = $db->query($query)->rowCount();
-$pagination = '';			
+$pagination = '';
 if($row_count > 0) {
     $totalproducts = ceil($row_count/$records_per_page);
     $currentPage = 1;
@@ -96,7 +95,7 @@ if ($row_count > $records_per_page) {
     $pagination = '<div class="call centered paddingupdown">' .$pagination .'</div>';
     echo $pagination;
 }
-?>		
+?>
 <script>
     function getPlayed(videoid) {
         fetch('login.php?playid=' + videoid, {method:'get'});
@@ -108,7 +107,7 @@ if ($row_count > $records_per_page) {
             document.getElementById("link" + videoid).style.display="none";
         }
     }
-</script>     
+</script>
    </div>
 </div>
 

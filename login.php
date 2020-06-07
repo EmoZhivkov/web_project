@@ -4,10 +4,10 @@ require_once('config.php');
 require_once('template.php');
 
 if (isset($_POST['email']) && isset($_POST['pass'])) {
-    try {    
+    try {
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_MAGIC_QUOTES);
         $pass = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_MAGIC_QUOTES);
-        
+
         $passwd = '';
         $id = 0;
         $ime = '';
@@ -18,12 +18,12 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $passwd = $row['pass'];
             $id = $row['id'];
-        }            
+        }
         $bool = password_verify($pass, $passwd);
         if ($bool == true) {
             $_SESSION['clientid'] = $id;
-            $_SESSION['client'] = $email;  
-            setcookie("sitecl", $id, strtotime('+30 days'));                  
+            $_SESSION['client'] = $email;
+            setcookie("sitecl", $id, strtotime('+30 days'));
             echo "<script> location.href='login.php';</script>";
         }
         else {
@@ -33,7 +33,7 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
     die();
 } elseif (isset($_POST['vid']) && isset($_POST['ime'])) {
     $vid= filter_input(INPUT_POST, 'vid', FILTER_VALIDATE_INT);
-    $ime = filter_input(INPUT_POST, 'ime', FILTER_SANITIZE_MAGIC_QUOTES); 
+    $ime = filter_input(INPUT_POST, 'ime', FILTER_SANITIZE_MAGIC_QUOTES);
     $youtube = filter_input(INPUT_POST, 'youtube', FILTER_SANITIZE_MAGIC_QUOTES);
 
     $stmt = $db->prepare("insert into products (clientid, vid, ime, youtube) values (:clientid, :vid, :ime, :youtube)");
@@ -61,16 +61,16 @@ $h1 = 'Вход | Профил';
 if (isset($_COOKIE['sitecl'])) {
     $clientid = $_COOKIE['sitecl'];
 }
-else if (!isset($_SESSION['clientid'])) {
+else if (isset($_SESSION['clientid'])) {
     $clientid = $_SESSION['clientid'];
-} 
+}
 $stmt = $db->prepare("SELECT * FROM clients WHERE id=:id limit 1");
 $stmt->execute(array(':id' => $clientid));
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $_SESSION['clientid'] = $row['id'];
-    $_SESSION['client'] = $row['email'];  
+    $_SESSION['client'] = $row['email'];
     $h1 = $_SESSION['client'];
-}   
+}
 
 $t = '';
 $d = '';
@@ -82,9 +82,8 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 
 $tpl->get_tpl('up.htm');
-$tpl->set_value('title','Вход | Профил - ' .$t);          
-$tpl->set_value('description','Вход | Профил. ' .$d);     
-$tpl->set_value('meta',$meta);      
+$tpl->set_value('title','Вход | Профил - ' .$t);
+$tpl->set_value('description','Вход | Профил. ' .$d);
 
 $tpl->tpl_parse();
 echo $tpl->html;
@@ -101,7 +100,7 @@ if ($clientid > 0) {
                 <div class="mainscroll">
                     <div class="inputleft">Вид</div>
                     <div class="inputright"><select name="vid">
-<?php 
+<?php
 $stmtclients = $db->query("SELECT * FROM vidove ORDER by id");
 $options = '';
 while($row = $stmtclients->fetch(PDO::FETCH_ASSOC)) {
@@ -117,18 +116,18 @@ echo($options);
                 </div>
                 <div class="mainscroll">
                     <div class="inputleft">YouTube линк</div>
-                    <div class="inputright"><input name="youtube" type="text" placeholder="https://www.youtube.com/watch?v=5t-wasokxRE"></div>     
+                    <div class="inputright"><input name="youtube" type="text" placeholder="https://www.youtube.com/watch?v=5t-wasokxRE"></div>
                 </div>
-                <div class="mainscroll">  
+                <div class="mainscroll">
                     <div class="inputleft">&nbsp;</div>
                     <div class="inputright"><a href="javascript:contactForm.submit();" class="buton">Добави</a></div>
                 </div>
             </form>
 
-        </div>      
+        </div>
         <div class="call centered paddingupdown">
             <h1 class="centered">ВАШИТЕ ПЕСНИ</h1>
-<?php 
+<?php
 $songs = '';
 $query = "SELECT * FROM products WHERE clientid=" .$clientid ." ORDER by id desc";
 $records_per_page = 6;
@@ -138,7 +137,7 @@ if(isset($_GET["page"])) {
 }
 $query2 = $query. " limit " .$records_per_page ." OFFSET " .$offset;
 $stmt = $db->query($query2);
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $videoId = $row['youtube'];
     $videoId = str_replace('https://www.youtube.com/watch?v=','',$videoId);
     $iframe = '<div class="contproduct"><iframe id="' .$row['id'] .'" src="//www.youtube.com/embed/' .$videoId .'" frameborder="0" allowfullscreen allow="autoplay"></iframe><a href="javascript:getPlayed(' .$row['id'] .');" id="link' .$row['id'] .'" class="play">&nbsp;</a><a href="login.php?deleteid=' .$row['id'] .'" class="delete">X</a></div>';
@@ -152,7 +151,7 @@ if (strpos($self, '?') > -1) {
     $sign = '&';
 }
 $row_count = $db->query($query)->rowCount();
-$pagination = '';			
+$pagination = '';
 if($row_count > 0) {
     $totalproducts = ceil($row_count/$records_per_page);
     $currentPage = 1;
@@ -193,7 +192,7 @@ if ($row_count > $records_per_page) {
 </script>
         </div>
 
-        
+
    </div>
 </div>
 <?php
@@ -204,7 +203,7 @@ if ($row_count > $records_per_page) {
 	<div class="contall">
         <div class="call centered">
             <h1 class="centered">ВАШИЯТ АКАУНТ</h1>
-        </div> 
+        </div>
         <div class="call centered">
             <form method="post" name="contactForm">
                 <div class="mainscroll">
@@ -213,16 +212,16 @@ if ($row_count > $records_per_page) {
                 </div>
                 <div class="mainscroll">
                     <div class="inputleft">Парола</div>
-                    <div class="inputright"><input name="pass" type="password"></div>     
+                    <div class="inputright"><input name="pass" type="password"></div>
                 </div>
-                <div class="mainscroll">  
+                <div class="mainscroll">
                     <div class="inputleft">&nbsp;</div>
                     <div class="inputright"><a href="javascript:contactForm.submit();" class="buton">Вход</a><br>
                     <a href="register.php" class="buton">Регистрирайте се тук</a></div>
                 </div>
             </form>
 
-        </div>       
+        </div>
    </div>
 </div>
 <?php
