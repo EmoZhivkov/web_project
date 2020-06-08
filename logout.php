@@ -1,6 +1,6 @@
 <?php
 
-session_start();  
+session_start();
 
 unset($_SESSION['clientid']);
 unset($_SESSION['client']);
@@ -9,6 +9,6 @@ setcookie("sitecl", 'content', 1);
 
 session_destroy();
 
-Header('Location: /login');
+Header('Location: index.php');
 
 ?>

@@ -23,7 +23,7 @@ $stmt = $db->query($query);
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	$menu .= '<li><a href="songs.php?v=' .$row['id'] .'">' .$row['ime'] .'</a></li>';
 }
-$menu .= '<li><a href="search.php">Търсене</a></li><li><a href="login.php">Вашият акаунт</a><ul>';
+$menu .= '<li><a href="search.php">Търсене</a></li><li><a href="login.php">Акаунт</a><ul>';
 if ($clientid > 0) {
 	if ($_SESSION['client']=='admin@admin.com') {
 		$menu .= '<li><a href="charts.php">Контролен панел</a></li>';

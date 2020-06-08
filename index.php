@@ -145,7 +145,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	<div class="contall">
         <div class="call centered paddingupdown centered">
 			<h1 class="centered">БРОЙ КАЧЕНИ ПЕСНИ ПО ПОТРЕБИТЕЛ</h1>
-			<table width="800" cellspacing="5">
+			<table width="800" cellspacing="5" style="margin: auto;">
 				<?=$elements?>
 			</table>
 		</div>

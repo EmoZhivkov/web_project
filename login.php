@@ -145,7 +145,6 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 echo($songs);
 
-$self = $pagerLink;
 $sign = '?';
 if (strpos($self, '?') > -1) {
     $sign = '&';

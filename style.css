@@ -7,11 +7,11 @@
 b, strong {
 	font-weight:700;
 }
-nav { 
-	display: block; 
+nav {
+	display: block;
 }
 p, ul {
-	margin-bottom:10px;	
+	margin-bottom:10px;
 }
 li {
 	list-style: circle url(images/list.png);
@@ -42,7 +42,7 @@ body, html {
 }
 body, td {
 	font-family: "PT Sans", Tahoma, Verdana, Arial, sans-serif;
-	font-size:14px;	
+	font-size:14px;
 	font-weight: normal;
 	color:black;
 }
@@ -84,7 +84,7 @@ th {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	-o-border-radius: 5px; 	
+	-o-border-radius: 5px;
 }
 .border {
 	border:1px solid #f1f2f3;
@@ -115,8 +115,7 @@ h1 {
 	padding-bottom:10px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;  	
-	background: url(images/dots.png) repeat-x left bottom;
+	box-sizing: border-box;
 }
 h2 {
 	width: 100%;
@@ -131,7 +130,7 @@ h2 {
 	margin-bottom:10px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;  	
+	box-sizing: border-box;
 }
 h3 {
 	color:black;
@@ -139,7 +138,7 @@ h3 {
 	font-weight:bold;
 	text-align:left;
 	margin:0;
-	margin-bottom:10px;	
+	margin-bottom:10px;
 }
 h4 {
 	color:black;
@@ -147,7 +146,7 @@ h4 {
 	font-weight:bold;
 	text-align:left;
 	margin:0;
-	margin-bottom:10px;	
+	margin-bottom:10px;
 }
 h5 {
 	color:black;
@@ -155,7 +154,7 @@ h5 {
 	font-weight:bold;
 	text-align:left;
 	margin:0;
-	margin-bottom:10px;	
+	margin-bottom:10px;
 }
 h6 {
 	color:black;
@@ -163,10 +162,10 @@ h6 {
 	font-weight:bold;
 	text-align:left;
 	margin:0;
-	margin-bottom:10px;	
+	margin-bottom:10px;
 }
 input, select, textarea, .input {
-	font-size:14px;	
+	font-size:14px;
 	color:black;
 	background-color: white;
 	padding: 7px;
@@ -174,7 +173,7 @@ input, select, textarea, .input {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;	
+	-o-border-radius: 5px;
 }
 input:focus, select:focus, textarea:focus {
 	border: 1px inset black;
@@ -187,10 +186,9 @@ input:focus, select:focus, textarea:focus {
 	font-weight: normal;
 	text-transform:uppercase;
 	overflow: hidden;
-	text-align: center;	
+	text-align: center;
 }
 hr {
-	background: url(images/dots.png) repeat-x left bottom;
 	border: 0px;
 	height: 1px;
 	width: 100%;
@@ -211,7 +209,7 @@ a.buton, a.buton:hover {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	-o-border-radius: 5px; 		
+	-o-border-radius: 5px;
 }
 a.buton:hover {
 	background: #0079b0;
@@ -234,7 +232,7 @@ a.butoninline, a.butoninline:hover {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	-o-border-radius: 5px; 		
+	-o-border-radius: 5px;
 }
 a.butoninline:hover {
 	background:#0079b0;
@@ -242,23 +240,23 @@ a.butoninline:hover {
 .contoverall {
 	width: 100%;
 	display: block;
-	float: left;	
+	float: left;
 }
 .contoverallup {
 	width: 100%;
 	display: block;
 	float: left;
-	background:black;	
+	background:black;
 	padding:10px 0 10px 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;  		
+	box-sizing: border-box;
 }
 .contoverallmenu {
 	width: 100%;
 	display: block;
 	float: left;
-	background:#e73c40;			
+	background:#e73c40;
 }
 .contoveralldown {
 	background:black;
@@ -270,19 +268,18 @@ a.butoninline:hover {
 	padding:30px 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;  		
+	box-sizing: border-box;
 }
 .paddingupdown {
 	padding:40px 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;  		
+	box-sizing: border-box;
 }
 .callmenu {
 	width: 100%;
-	height: 60px;
 	display: block;
-	float: left;		
+	float: left;
 }
 .contall {
 	width: 960px;
@@ -309,14 +306,14 @@ a.butoninline:hover {
 	line-height: 20px;
 	font-size:16px;
 	text-transform:uppercase;
-	margin-top: 90px;	
+	margin-top: 90px;
 	display: inline;
 	float: left;
 	text-align:right;
 	color:black;
 }
 .slide {
-   	width: 100%; 
+   	width: 100%;
 	height:400px;
 }
 .contproduct {
@@ -327,7 +324,7 @@ a.butoninline:hover {
 	margin-left:10px;
 	margin-right:10px;
 	margin-bottom:20px;
-	position: relative;	
+	position: relative;
 }
 .contproduct iframe {
 	width:100%;
@@ -436,7 +433,7 @@ a.butoninline:hover {
 	border-radius:20px;
 	-moz-border-radius:20px;
 	-webkit-border-radius:20px;
-	-o-border-radius:20px; 	
+	-o-border-radius:20px;
 }
 .contKontleft {
 	width:470px;
@@ -459,8 +456,8 @@ a.butoninline:hover {
 	padding-left:40px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box; 
-	margin-bottom:10px;	
+	box-sizing: border-box;
+	margin-bottom:10px;
 }
 .contacticonhome {
 	background-image: url(images/home.png);
@@ -469,36 +466,36 @@ a.butoninline:hover {
 .contacticonemail {
 	background-image: url(images/email.png);
 	height: 26px;
-	line-height:26px;	
+	line-height:26px;
 }
 .contacticonphone {
 	background-image: url(images/phone.png);
 	height: 26px;
-	line-height:26px;	
+	line-height:26px;
 }
 .contacticonfax {
 	background-image: url(images/fax.png);
 	height: 26px;
-	line-height:26px;	
+	line-height:26px;
 }
 .contacticonfacebook {
 	background-image: url(images/f.png);
 	height: 26px;
-	line-height:26px;	
+	line-height:26px;
 }
 .productimageleft {
 	width: 40%;
 	display: block;
 	float: left;
 	margin-right: 30px;
-	margin-bottom:10px;	
+	margin-bottom:10px;
 }
 .productimageright {
 	width: 40%;
 	display: block;
 	float: right;
 	margin-right: 30px;
-	margin-bottom:10px;	
+	margin-bottom:10px;
 }
 table.tableproduct {
 	width:100%;
@@ -520,7 +517,7 @@ table.tableproduct td {
 	vertical-align:middle;
 	padding:5px;
 }
-.cproducts { 
+.cproducts {
 	display:inline;
 	float:left;
 	width:300px;
@@ -542,10 +539,10 @@ a.cproductslink, a.cproductslink:hover {
 	background:#f0f0f0;
 	font-weight:bold;
 	font-size:18px;
-	text-transform:uppercase;	
+	text-transform:uppercase;
 	text-align:center;
 }
-.cproductsimage { 
+.cproductsimage {
 	width:270px;
 	height: 200px;
 	background:white;
@@ -558,9 +555,9 @@ a.cproductslink, a.cproductslink:hover {
 	border:2px solid black;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box; 		
+	box-sizing: border-box;
 }
-.cimageright { 
+.cimageright {
 	width:300px;
 	background:#f0f0f0;
 	display: block;
@@ -569,21 +566,21 @@ a.cproductslink, a.cproductslink:hover {
 	margin-bottom:20px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box; 		
+	box-sizing: border-box;
 }
-.cimageright img { 
+.cimageright img {
 	width:100%;
 	display: block;
 	float:left;
 }
-.cimagerighttext { 
+.cimagerighttext {
 	width:100%;
 	display: block;
 	float:left;
 	padding:20px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box; 		
+	box-sizing: border-box;
 }
 
 
@@ -600,20 +597,20 @@ a.cproductslink, a.cproductslink:hover {
 }
 .clogo {
 	width: 205px;
-	height:110px;	
+	height:110px;
 }
 .clangs {
 	width: 555px;
 }
 .cycle-slideshow {
-   	width: 100%; 
+   	width: 100%;
 	height: 160px;
 }
 .cycle-slideshow img {
-   	width: 100%; 
+   	width: 100%;
 	height: 160px;
 }
-.cycleoverlaytext { 
+.cycleoverlaytext {
     width: 100%;
 	margin-top:50px;
 	font-size:20px;
@@ -622,11 +619,11 @@ a.cproductslink, a.cproductslink:hover {
 	margin-left:40px;
 	margin-right:40px;
 }
-.contproject { 
+.contproject {
 	margin-left:40px;
 	margin-right:40px;
 }
-.cproducts { 
+.cproducts {
 	margin-left:40px;
 	margin-right:40px;
 }
@@ -640,17 +637,17 @@ a.cproductslink, a.cproductslink:hover {
 	margin:10px 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box; 	
+	box-sizing: border-box;
 }
 .cdownright {
 	display:inline;
 	float:left;
 	width:200px;
-	height:44px;	
+	height:44px;
 	margin:10px 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box; 
+	box-sizing: border-box;
 }
 .imagecontainerright {
 	width:300px;
@@ -714,14 +711,14 @@ a.cproductslink, a.cproductslink:hover {
 	width: 275px;
 }
 .cycle-slideshow {
-   	width: 100%; 
+   	width: 100%;
 	height: 120px;
 }
 .cycle-slideshow img {
-   	width: 100%; 
+   	width: 100%;
 	height: 120px;
 }
-.cycleoverlaytext { 
+.cycleoverlaytext {
     width: 100%;
 	margin-top:30px;
 	color:black;
@@ -731,16 +728,16 @@ a.cproductslink, a.cproductslink:hover {
 	margin-left:90px;
 	margin-right:90px;
 }
-.contproject { 
+.contproject {
 	margin-left:90px;
 	margin-right:90px;
 }
-.cproducts { 
+.cproducts {
 	margin-left:90px;
 	margin-right:90px;
 }
 .cdownleft {
-	width:480px;	
+	width:480px;
 }
 .cdownright {
 	width:200px;
@@ -783,14 +780,14 @@ a.cproductslink, a.cproductslink:hover {
 }
 .productimageleft {
 	width: 50%;
-	margin-right: 20px;	
+	margin-right: 20px;
 }
 .productimageright {
 	width: 50%;
 	margin-right: 20px;
 }
-.cimageright { 
-	width:220px;	
+.cimageright {
+	width:220px;
 }
 
 
@@ -816,17 +813,17 @@ a.cproductslink, a.cproductslink:hover {
 }
 .clangs {
 	width: 320px;
-	margin-top: 10px;	
+	margin-top: 10px;
 }
 .cycle-slideshow {
-   	width: 100%; 
+   	width: 100%;
 	height: 100px;
 }
 .cycle-slideshow img {
-   	width: 100%; 
+   	width: 100%;
 	height: 100px;
 }
-.cycleoverlaytext { 
+.cycleoverlaytext {
     width: 100%;
 	margin-top:15px;
 	color:black;
@@ -850,7 +847,7 @@ a.cproductslink, a.cproductslink:hover {
 .imagecontainer6, .imagecontainer5, .imagecontainer4, .imagecontainer3, .imagecontainer2, .imagecontainer1 {
 	width:100%;
 	margin-left:0;
-	margin-right:0;	
+	margin-right:0;
 }
 .contKontleft {
 	width:320px;
@@ -869,7 +866,7 @@ a.cproductslink, a.cproductslink:hover {
 	width: 100%;
 	margin-right: 0;
 }
-.cimageright { 
+.cimageright {
 	width:320px;
 	margin-right:0;
 }
@@ -895,7 +892,7 @@ a.page-link, a.page-link:hover {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	-o-border-radius: 5px; 		
+	-o-border-radius: 5px;
 }
 a.page-link:hover {
 	background:#0079b0;

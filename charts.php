@@ -10,9 +10,9 @@ require_once('template.php');
 
 $tpl->get_tpl('up.htm');
 
-$tpl->set_value('title','Контролен панел - ' .$t);
+$tpl->set_value('title','Контролен панел');
 
-$tpl->set_value('description','Контролен панел. ' .$d);
+$tpl->set_value('description','Контролен панел');
 
 
 
@@ -29,7 +29,7 @@ require_once('menu.php');
 
 
 
-if ( $_GET['editid'] > 0) {
+if (isset($_GET['editid']) && $_GET['editid'] > 0) {
 
     try {
 
