@@ -1,8 +1,8 @@
 <?php
 class template_class
     {
-    var $values     = array();	// переменные шаблона
-    var $html;				// HTML-код
+    var $values = array();
+    var $html;
 
     function get_tpl($tpl_name)
       {

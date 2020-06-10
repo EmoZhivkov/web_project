@@ -42,10 +42,10 @@ $query = "SELECT * FROM products ORDER by played desc LIMIT 8";
 $stmt = $db->query($query);
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	$counter += 1;
+	$allproducts += $row['played'];
 	if ($counter==1) {
-		$highest = $row['played'] * 70;
+		$highest = $row['played']*15 ;
 	}
-    $allproducts += $row['played'];
 }
 
 $elements = '';
@@ -55,7 +55,7 @@ $query = "SELECT * FROM products ORDER by played desc LIMIT 8";
 $stmt = $db->query($query);
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	$colorid += 1;
-	$procent = ($row['played'] * 100) / $allproducts;
+	$procent = ($row['played'] * 100) / $allproducts ;
 	$procent += 10;
 	$procent = number_format($procent, 1, '.', ' ');
 	$elements .= '<td width="12%" height="' .$highest .'" valign="bottom"><div style="display:block;height:' .$procent .'%;background:' .$allcolors[$colorid] .';color:white;width:100%;text-align:top;padding:7px;padding-top:10px;">' .$row['played'] .'</div></td>';
