@@ -1,0 +1,7 @@
+https://www.sitepoint.com/javascript-charts-custom-data-sets/#:~:text=set(rawData)%3B%20var%20view4,Data%20Set%22)%3B%20chart. - основно обяснение за графики в джаваскрипт
+https://www.chartjs.org/ - графики в джаваскрипт
+https://www.siteground.com/tutorials/php-mysql/#:~:text=PHP%20is%20the%20most%20popular,also%20free%20and%20open%20source. - връзка между php и mqsql
+https://www.w3schools.com/php/php_sessions.asp - сесии в php
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp - меню в сайта
+https://www.w3schools.com/html/html_youtube.asp - интеграция на html с youtube
+https://www.myprogrammingtutorials.com/create-pagination-with-php-and-mysql.html - разпределянето на видеата на страници
